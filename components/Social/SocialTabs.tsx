@@ -12,7 +12,7 @@ export default function SocialTabs() {
             <MessageCircle className="h-4.5 w-4.5" strokeWidth={2} />
           </SocialLink>
           <SocialLink href={CONTACT.facebookHref} label="Visit our Facebook page">
-            <FacebookMark className="h-4.5 w-4.5" />
+            <FacebookMark className="h-7 w-7 mr-1" />
           </SocialLink>
           <SocialLink href={CONTACT.phoneHref} label="Call us">
             <Phone className="h-4.5 w-4.5" strokeWidth={2} />

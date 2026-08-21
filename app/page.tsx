@@ -1,6 +1,8 @@
 import Hero from "@/components/home/Hero";
 import { RatingFloatingCard, ShippingFloatingCard, TrustStrips } from "@/components/home/Hero";
-import NewArrivals from "@/components/home/NewArrivals";
+import ProductList from "@/components/Product/ProductList";
+import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
+import { EVERY_DAY_DEALS, NEW_ARRIVALS, MONTHLY_PROMOTIONS } from "@/constants/ProductList";
 
 function HillScene() {
   return (
@@ -12,8 +14,8 @@ function HillScene() {
     >
       <defs>
         <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#4ade80" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#4ade80" stopOpacity="0" />
+          <stop offset="0%" stopColor="#692159" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="#692159" stopOpacity="0" />
         </radialGradient>
       </defs>
 
@@ -75,7 +77,30 @@ export default function Home() {
         </div>
       </section>
 
-      <NewArrivals />
+      <ScrollReveal type="fade-up" duration={1.6} delay={0.1}>
+        <ProductList 
+          products={MONTHLY_PROMOTIONS}
+          title="Monthly Promotions"
+          eyebrow="Limited-Time Offers"
+          isViewAllVisible
+        />
+      </ScrollReveal>
+
+      <ScrollReveal type="fade-right" duration={1.5} delay={0.15}>
+        <ProductList 
+          products={EVERY_DAY_DEALS}
+          title="Every Day Deals"
+          eyebrow="Refreshed Daily"
+        />
+      </ScrollReveal>
+
+      <ScrollReveal type="fade-left" duration={1.5} delay={0.15}>
+        <ProductList 
+          products={NEW_ARRIVALS}
+          title="New Arrivals"
+          eyebrow="Just Landed"
+        />
+      </ScrollReveal>
 
       <TrustStrips />
     </div>

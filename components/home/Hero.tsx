@@ -1,12 +1,12 @@
 import React from 'react'
-import { ArrowRight, Star, Truck } from 'lucide-react'
+import { ArrowRight, Star, Truck, BadgeCheck } from 'lucide-react'
 import { CATEGORIES, TRUST_POINTS } from "@/constants/Hero";
 
 function Rating() {
   return (
     <div className="mt-8 flex items-center justify-center gap-3 lg:justify-start">
       <div className="flex items-center gap-0.5" aria-hidden="true">
-        {Array.from({ length: 3 }).map((_, i) => (
+        {Array.from({ length: 5 }).map((_, i) => (
           <Star
             key={i}
             className="h-4 w-4 fill-secondary-500 text-secondary-500"
@@ -43,7 +43,7 @@ export function RatingFloatingCard() {
   return (
     <div className="absolute -bottom-4 -left-2 flex items-center gap-3 rounded-2xl bg-base-50 p-3.5 shadow-xl shadow-primary-900/10 sm:-bottom-6 sm:-left-6 sm:p-4">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary-50">
-        <Star className="h-5 w-5 fill-secondary-500 text-secondary-500" />
+        <BadgeCheck className="h-5 w-5 text-secondary-500" />
       </div>
       <div className="leading-tight gap-y-4">
         <p className="text-sm font-semibold text-primary-800">
@@ -117,7 +117,7 @@ export default function Hero() {
                     href="#shop"
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-800 px-7 py-3.5 text-sm font-medium text-base-50 transition-colors duration-300 hover:bg-secondary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 sm:w-auto"
                 >
-                    Shop the Collection
+                    View Monthly Offers
                     <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </a>
                 <a

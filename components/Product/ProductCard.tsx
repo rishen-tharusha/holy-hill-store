@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IProduct } from "@/constants/NewArrivals";
+import { IProduct } from "@/constants/ProductList";
 import { Sparkles } from "lucide-react";
 
 interface IProductCardProps {
@@ -12,7 +12,7 @@ export default function ProductCard({ product }: IProductCardProps) {
       href={product.href ?? "#"}
       className="group block focus:outline-none"
     >
-      <div className="relative aspect-4/5 overflow-hidden rounded-[1.75rem] bg-base-600">
+      <div className="relative h-105 overflow-hidden rounded-[1.75rem] bg-base-600 sm:h-110 lg:h-105">
         <Image
           src={product.image}
           alt={product.name}
@@ -36,7 +36,7 @@ export default function ProductCard({ product }: IProductCardProps) {
       </div>
 
       <div className="mt-3.5 flex items-start justify-between gap-3 px-0.5">
-        <p className="text-sm font-medium leading-snug text-primary-800 transition-colors duration-200 group-hover:text-secondary-700">
+        <p className="text-base font-medium leading-snug text-primary-800 transition-colors duration-200 group-hover:text-secondary-700">
           {product.name}
         </p>
 
