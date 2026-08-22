@@ -9,8 +9,8 @@ interface IProductCardProps {
 export default function ProductCard({ product }: IProductCardProps) {
   return (
     <a
-      href={product.href ?? "#"}
-      className="group block focus:outline-none"
+      href={product.href || undefined}
+      className="group block focus:outline-none cursor-pointer"
     >
       <div className="relative h-105 overflow-hidden rounded-[1.75rem] bg-base-600 sm:h-110 lg:h-105">
         <Image

@@ -12,6 +12,7 @@ interface IProductListProps {
   title?: string;
   viewAllHref?: string;
   isViewAllVisible?: boolean;
+  id?: string;
 }
 
 export default function ProductList({
@@ -19,7 +20,8 @@ export default function ProductList({
   eyebrow = "",
   title = "",
   viewAllHref = "",
-  isViewAllVisible = false
+  isViewAllVisible = false,
+  id = ""
 }: IProductListProps) {
   const trackRef = useRef<HTMLUListElement | null>(null);
 
@@ -78,6 +80,7 @@ export default function ProductList({
     <section
       aria-labelledby="new-arrivals-heading"
       className="bg-base-50 py-6 sm:py-10 lg:py-8"
+      id={id || undefined}
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         {/* Header */}

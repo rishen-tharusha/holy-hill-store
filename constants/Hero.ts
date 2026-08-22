@@ -1,9 +1,9 @@
 import { Gift, ShieldCheck, Sparkles, Tag, Truck, ShoppingCart } from "lucide-react";
 
 export const CATEGORIES = [
-  { label: "Monthly Offers", icon: Tag, href: "#offers" },
-  { label: "New Arrivals", icon: Sparkles, href: "#" },
-  { label: "Everyday Deals", icon: Gift, href: "#" },
+  { label: "Monthly Offers", icon: Tag, href: "/offers" },
+  { label: "New Arrivals", icon: Sparkles, href: "#arrivals" },
+  { label: "Everyday Deals", icon: Gift, href: "#deals" },
 ];
 
 export const TRUST_POINTS = [

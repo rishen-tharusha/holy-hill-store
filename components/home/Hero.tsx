@@ -114,14 +114,14 @@ export default function Hero() {
 
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
                 <a
-                    href="#shop"
+                    href="/offers"
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-800 px-7 py-3.5 text-sm font-medium text-base-50 transition-colors duration-300 hover:bg-secondary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 sm:w-auto"
                 >
                     View Monthly Offers
                     <ArrowRight className="h-4 w-4" strokeWidth={2} />
                 </a>
                 <a
-                    href="#about"
+                    href="/about"
                     className="inline-flex w-full items-center justify-center rounded-full border border-primary-200 px-7 py-3.5 text-sm font-medium text-primary-700 transition-colors duration-300 hover:border-primary-800 hover:text-primary-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 sm:w-auto"
                 >
                     Our Story

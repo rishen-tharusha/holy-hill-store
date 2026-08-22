@@ -83,6 +83,7 @@ export default function Home() {
           title="Monthly Promotions"
           eyebrow="Limited-Time Offers"
           isViewAllVisible
+          viewAllHref="/offers"
         />
       </ScrollReveal>
 
@@ -91,6 +92,7 @@ export default function Home() {
           products={EVERY_DAY_DEALS}
           title="Every Day Deals"
           eyebrow="Refreshed Daily"
+          id="deals"
         />
       </ScrollReveal>
 
@@ -99,6 +101,7 @@ export default function Home() {
           products={NEW_ARRIVALS}
           title="New Arrivals"
           eyebrow="Just Landed"
+          id="arrivals"
         />
       </ScrollReveal>
 
