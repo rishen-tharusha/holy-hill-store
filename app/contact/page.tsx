@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function ContactUsPage() {
     return (
-        <div>
-            <h1>Contact Us</h1>
+        <div className='min-h-screen bg-base-50'>
+            
         </div>
     )
 }

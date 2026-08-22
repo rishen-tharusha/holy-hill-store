@@ -82,7 +82,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="#contact"
+          href="/contact"
           className="hidden items-center rounded-full bg-primary-800 px-6 py-2.5 text-[15px] font-medium text-base-50 transition-colors duration-300 hover:bg-secondary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 lg:inline-flex"
         >
           Contact Us
@@ -99,37 +99,5 @@ export default function Navbar() {
         isOpen={isOpen}
       />
     </header>
-  );
-}
-
-export function HillMark() {
-  return (
-    <svg
-      width="34"
-      height="34"
-      viewBox="0 0 34 34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      className="shrink-0"
-    >
-      <circle
-        cx="24"
-        cy="9"
-        r="3.5"
-        className="fill-secondary-500"
-      />
-
-      <path
-        d="M2 25 L12 12 L18 19 L23 13 L32 25 Z"
-        className="fill-primary-800"
-      />
-
-      <path
-        d="M2 25 L12 12 L15 15.5 L8 25 Z"
-        className="fill-primary-600"
-        opacity="0.5"
-      />
-    </svg>
   );
 }

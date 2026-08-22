@@ -86,7 +86,7 @@ export default function Home() {
         />
       </ScrollReveal>
 
-      <ScrollReveal type="fade-right" duration={1.5} delay={0.15}>
+      <ScrollReveal type="fade-up" duration={1.5} delay={0.15}>
         <ProductList 
           products={EVERY_DAY_DEALS}
           title="Every Day Deals"
@@ -94,7 +94,7 @@ export default function Home() {
         />
       </ScrollReveal>
 
-      <ScrollReveal type="fade-left" duration={1.5} delay={0.15}>
+      <ScrollReveal type="fade-up" duration={1.5} delay={0.15}>
         <ProductList 
           products={NEW_ARRIVALS}
           title="New Arrivals"

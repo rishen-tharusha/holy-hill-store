@@ -6,8 +6,8 @@ import { motion } from "motion/react";
 type RevealType =
   | "fade-up"
   | "fade-down"
-  | "fade-left"
-  | "fade-right"
+  // | "fade-left"
+  // | "fade-right"
   | "zoom"
   | "blur"
   | "scale-up";
@@ -30,15 +30,15 @@ const animations = {
     animate: { opacity: 1, y: 0 },
   },
 
-  "fade-left": {
-    initial: { opacity: 0, x: -100 },
-    animate: { opacity: 1, x: 0 },
-  },
+  // "fade-left": {
+  //   initial: { opacity: 0, x: -40 },
+  //   animate: { opacity: 1, x: 0 },
+  // },
 
-  "fade-right": {
-    initial: { opacity: 0, x: 100 },
-    animate: { opacity: 1, x: 0 },
-  },
+  // "fade-right": {
+  //   initial: { opacity: 0, x: 40 },
+  //   animate: { opacity: 1, x: 0 },
+  // },
 
   zoom: {
     initial: { opacity: 0, scale: 0.75 },
