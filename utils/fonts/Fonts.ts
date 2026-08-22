@@ -1,4 +1,4 @@
-import { Fraunces, Inter } from 'next/font/google'
+import { Fraunces, Inter, Playfair_Display } from 'next/font/google'
 
 // Display face for headings — warm, a little editorial, used with restraint.
 export const fraunces = Fraunces({
@@ -14,3 +14,15 @@ export const inter = Inter({
   weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
+
+export const display = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
+});
+
+export const body = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-body",
+});
