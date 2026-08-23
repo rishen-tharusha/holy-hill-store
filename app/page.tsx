@@ -3,52 +3,7 @@ import { RatingFloatingCard, ShippingFloatingCard, TrustStrips } from "@/compone
 import ProductList from "@/components/Product/ProductList";
 import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 import { EVERY_DAY_DEALS, NEW_ARRIVALS, MONTHLY_PROMOTIONS } from "@/constants/ProductList";
-
-function HillScene() {
-  return (
-    <svg
-      viewBox="0 0 600 520"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-full w-full"
-      aria-hidden="true"
-    >
-      <defs>
-        <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#692159" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#692159" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-
-      {/* sky texture dots */}
-      <circle cx="90" cy="80" r="3" className="fill-primary-200" />
-      <circle cx="150" cy="130" r="2" className="fill-primary-200" />
-      <circle cx="500" cy="70" r="2.5" className="fill-primary-200" />
-      <circle cx="440" cy="150" r="2" className="fill-primary-200" />
-
-      {/* sun */}
-      <circle cx="430" cy="140" r="90" fill="url(#sunGlow)" />
-      <circle cx="430" cy="140" r="42" className="fill-secondary-400" />
-
-      {/* back hill */}
-      <path
-        d="M0 340 C 120 260, 220 260, 320 320 C 420 380, 520 300, 600 330 L600 520 L0 520 Z"
-        className="fill-primary-300"
-      />
-
-      {/* mid hill */}
-      <path
-        d="M0 400 C 100 340, 240 330, 340 390 C 430 440, 520 370, 600 400 L600 520 L0 520 Z"
-        className="fill-primary-500"
-      />
-
-      {/* front hill */}
-      <path
-        d="M0 460 C 140 400, 260 410, 360 460 C 450 500, 540 440, 600 460 L600 520 L0 520 Z"
-        className="fill-primary-800"
-      />
-    </svg>
-  );
-}
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -67,18 +22,25 @@ export default function Home() {
 
           <div className="relative mx-2 sm:mx-4 lg:mx-0">
             <div className="relative overflow-hidden rounded-4xl bg-linear-to-b from-base-200 to-base-500 sm:rounded-[2.5rem]">
-              <HillScene />
+              <Image
+                src="/images/hero/Hero-Logo-02.jpeg"
+                alt="Featured collection"
+                width={600}
+                height={720}
+                priority
+                className="h-auto w-full object-cover"
+              />
             </div>
 
             <RatingFloatingCard />
 
-            <ShippingFloatingCard />
+            {/* <ShippingFloatingCard /> */}
           </div>
         </div>
       </section>
 
       <ScrollReveal type="fade-up" duration={1.6} delay={0.1}>
-        <ProductList 
+        <ProductList
           products={MONTHLY_PROMOTIONS}
           title="Monthly Promotions"
           eyebrow="Limited-Time Offers"
@@ -88,7 +50,7 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal type="fade-up" duration={1.5} delay={0.15}>
-        <ProductList 
+        <ProductList
           products={EVERY_DAY_DEALS}
           title="Every Day Deals"
           eyebrow="Refreshed Daily"
@@ -97,7 +59,7 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal type="fade-up" duration={1.5} delay={0.15}>
-        <ProductList 
+        <ProductList
           products={NEW_ARRIVALS}
           title="New Arrivals"
           eyebrow="Just Landed"

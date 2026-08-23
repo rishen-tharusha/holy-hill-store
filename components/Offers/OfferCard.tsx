@@ -37,7 +37,7 @@ export default function OfferCard({ offer, index }: IOfferCardProps) {
         />
 
         {offer.showDetails ? (
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary-900/90 via-primary-900/50 to-transparent p-4 pt-10 sm:p-5 sm:pt-12">
+          <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-primary-900/90 via-primary-900/50 to-transparent p-4 pt-10 sm:p-5 sm:pt-12">
             <p
               className={`${fraunces.className} truncate text-sm italic text-base-50 sm:text-base`}
             >
