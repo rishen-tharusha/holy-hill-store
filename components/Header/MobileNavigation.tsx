@@ -57,7 +57,7 @@ export default function MobileNavigation({ isOpen, closeMenu} : IMobileNavigatio
               }}
             >
               <a
-                href="#contact"
+                href="/contact"
                 onClick={closeMenu}
                 className="inline-flex items-center rounded-full bg-primary-800 px-7 py-3 text-base font-medium text-base-50 transition-colors hover:bg-secondary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2"
               >
