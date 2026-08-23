@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { NAV_LINKS } from "@/constants/NavLinks";
 import MobileNavigation from "../Header/MobileNavigation";
@@ -8,6 +9,8 @@ import LogoContainer from "../Header/LogoContainer";
 import MobileMenuButton from "../Header/MobileMenuButton";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,18 +28,13 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
-  // Close mobile menu when resizing to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -69,16 +67,24 @@ export default function Navbar() {
         <LogoContainer closeMenu={closeMenu} />
 
         <ul className="hidden items-center gap-8 lg:flex xl:gap-10">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="relative rounded-sm py-1 text-[15px] font-medium text-primary-600 transition-colors duration-200 hover:text-primary-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 after:absolute after:-bottom-0.5 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-secondary-500 after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={`relative rounded-sm py-1 text-[15px] font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 after:absolute after:-bottom-0.5 after:left-1/2 after:h-0.5 after:-translate-x-1/2 after:bg-secondary-500 after:transition-all after:duration-300 ${
+                    isActive
+                      ? "text-primary-800 after:w-full"
+                      : "text-primary-600 hover:text-primary-800 hover:after:w-full"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <a
@@ -88,16 +94,13 @@ export default function Navbar() {
           Contact Us
         </a>
 
-        <MobileMenuButton 
-            onPress={() => setIsOpen((value) => !value)}
-            isOpen={isOpen}
+        <MobileMenuButton
+          onPress={() => setIsOpen((value) => !value)}
+          isOpen={isOpen}
         />
       </nav>
 
-      <MobileNavigation 
-        closeMenu={closeMenu}
-        isOpen={isOpen}
-      />
+      <MobileNavigation closeMenu={closeMenu} isOpen={isOpen} />
     </header>
   );
 }
