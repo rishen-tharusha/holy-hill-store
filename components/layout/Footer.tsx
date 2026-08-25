@@ -87,7 +87,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col-reverse items-center gap-4 border-t border-primary-700 pt-6 sm:flex-row sm:justify-between">
           <p className="text-xs text-primary-400">
-            &copy; {year} Holy Hill Premier. All rights reserved.
+            &copy; {year} Holly Hill Premier. All rights reserved.
           </p>
           <p className="text-xs text-primary-400">Quality products. Better shopping.</p>
         </div>

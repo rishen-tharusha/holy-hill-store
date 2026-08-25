@@ -98,7 +98,7 @@ export default function Hero() {
     return (
         <div className="text-center lg:text-left">
             <span className="inline-flex items-center gap-2 rounded-full bg-secondary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-secondary-700">
-                Holy Hill Premier
+                Holly Hill Premier
             </span>
 
             <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-primary-800 sm:text-5xl lg:text-6xl">

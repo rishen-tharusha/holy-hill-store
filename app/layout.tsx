@@ -5,10 +5,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Holy Hill Store Store",
-    template: "%s | Holy Hill Store",
+    default: "Holly Hill Store",
+    template: "%s | Holly Hill Store",
   },
-  description: "Holy Hill Store - Your online shopping destination.",
+  description: "Holly Hill Store - Your online shopping destination.",
 };
 
 export default function RootLayout({

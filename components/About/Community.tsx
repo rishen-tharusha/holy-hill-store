@@ -12,7 +12,7 @@ export default function Community() {
                         <MapPin className="h-7 w-7 text-white" strokeWidth={1.75} />
                     </div>
                     <h2 className={`${fraunces.className} text-3xl text-white sm:text-4xl`}>
-                        Proudly part of Portsmouth
+                        Proudly part of Holly Hill
                     </h2>
                     <p className="mx-auto mt-4 max-w-xl text-white/90">
                         HollyHill Store isn&apos;t just somewhere to shop — it&apos;s

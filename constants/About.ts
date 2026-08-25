@@ -107,7 +107,7 @@ export const whyUs = [
   {
     icon: Users,
     title: 'Community Focus',
-    desc: 'Proud to serve, support, and be part of our Portsmouth community.',
+    desc: 'Proud to serve, support, and be part of our Holly Hill community.',
   },
 ]
 

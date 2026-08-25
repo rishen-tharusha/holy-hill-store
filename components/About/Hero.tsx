@@ -12,16 +12,16 @@ export default function AboutHero() {
                     <div className="mb-6 inline-flex items-center gap-2">
                         <span className="h-1.5 w-1.5 rounded-full bg-secondary-500" />
                         <span className="text-sm font-semibold tracking-[0.2em] text-secondary-600">
-                            PORTSMOUTH&apos;S LOCAL FAVOURITE
+                            HOLLY HILL&apos;S LOCAL FAVOURITE
                         </span>
                     </div>
                     <h1
                         className={`font-serif text-4xl leading-[1.1] text-primary-700 sm:text-5xl lg:text-6xl`}
                     >
-                        Your corner of Portsmouth, done properly.
+                        Your corner of Holly Hill, done properly.
                     </h1>
                     <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-500">
-                        HollyHill Store is a family-run shop stacked with fresh bakes,
+                        Holly Hill Store is a family-run shop stacked with fresh bakes,
                         barista coffee and everything in between — because your
                         favourites should always be close to home.
                     </p>
