@@ -11,7 +11,7 @@ export default function LogoContainer({
 }: ILogoContainerProps) {
   return (
     <a
-      href="#home"
+      href="/"
       onClick={closeMenu}
       className="relative z-60 flex w-40 shrink-0 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500"
     >
