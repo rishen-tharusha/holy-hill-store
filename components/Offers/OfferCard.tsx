@@ -32,7 +32,7 @@ export default function OfferCard({ offer, index }: IOfferCardProps) {
           alt={offer.alt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+          className="object-fill transition-transform duration-700 ease-out group-hover:scale-[1.02]"
           loading="eager"
         />
 

@@ -46,6 +46,7 @@ export default function Home() {
           eyebrow="Limited-Time Offers"
           isViewAllVisible
           viewAllHref="/offers"
+          resizable
         />
       </ScrollReveal>
 

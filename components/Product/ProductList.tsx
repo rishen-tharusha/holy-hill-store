@@ -13,6 +13,7 @@ interface IProductListProps {
   viewAllHref?: string;
   isViewAllVisible?: boolean;
   id?: string;
+  resizable?: boolean;
 }
 
 export default function ProductList({
@@ -21,7 +22,8 @@ export default function ProductList({
   title = "",
   viewAllHref = "",
   isViewAllVisible = false,
-  id = ""
+  id = "",
+  resizable = false
 }: IProductListProps) {
   const trackRef = useRef<HTMLUListElement | null>(null);
 
@@ -123,7 +125,7 @@ export default function ProductList({
                 data-card
                 className={`shrink-0 snap-start ${getCardWidth(products.length)}`}
               >
-                <ProductCard product={product} />
+                <ProductCard product={product} resizable />
               </li>
             ))}
           </ul>

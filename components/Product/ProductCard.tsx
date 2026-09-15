@@ -4,13 +4,17 @@ import { Sparkles } from "lucide-react";
 
 interface IProductCardProps {
   product: IProduct;
+  resizable: boolean;
 }
 
-export default function ProductCard({ product }: IProductCardProps) {
+export default function ProductCard({
+  product,
+  resizable,
+}: IProductCardProps) {
   return (
     <a
       href={product.href || undefined}
-      className="group block focus:outline-none cursor-pointer"
+      className="group block cursor-pointer focus:outline-none"
     >
       <div className="relative h-105 overflow-hidden rounded-[1.75rem] bg-base-600 sm:h-110 lg:h-105">
         <Image
@@ -18,16 +22,17 @@ export default function ProductCard({ product }: IProductCardProps) {
           alt={product.name}
           fill
           sizes="(min-width: 1024px) 23vw, (min-width: 640px) 40vw, 65vw"
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+          className={
+            resizable
+              ? "object-fill transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+              : "object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+          }
           loading="eager"
         />
 
         {product.isNew && (
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-base-50/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-secondary-700 shadow-sm backdrop-blur-sm">
-            <Sparkles
-              className="h-3 w-3"
-              strokeWidth={2}
-            />
+            <Sparkles className="h-3 w-3" strokeWidth={2} />
             New
           </span>
         )}
