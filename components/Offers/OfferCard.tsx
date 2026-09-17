@@ -26,7 +26,7 @@ export default function OfferCard({ offer, index }: IOfferCardProps) {
       delay={Math.min(index, 6) * 0.06}
       duration={0.9}
     >
-      <article className="group relative aspect-square w-full cursor-pointer overflow-hidden rounded-2xl border border-primary-100 bg-base-100">
+      <article className="group relative aspect-4/5 w-full cursor-pointer overflow-hidden rounded-2xl border border-primary-100 bg-base-100">
         <Image
           src={offer.image}
           alt={offer.alt}
